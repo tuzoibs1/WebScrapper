@@ -1,0 +1,9 @@
+#ignore these files
+*.idea
+
+*.py[cod]
+*$py.class
+
+.Python
+
+*.vscode
