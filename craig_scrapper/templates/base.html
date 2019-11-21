@@ -57,9 +57,9 @@
 <form action="{% url 'new_search'%}" method="post" >
         {% csrf_token %} <!--django security feature-->
         <input type="text" name="search" placeholder="search">
-        <input type="text" name="min_price" placeholder="min price">
+       <!-- <input type="text" name="min_price" placeholder="min price">
         <input type="text" name="max_price" placeholder="max price"> 
-    <button class="btn waves-effect light-blue" type="submit" name="action">Submit
+       --><button class="btn waves-effect light-blue" type="submit" name="action">Submit
         <i class="material-icons right">send</i>
     </button>
 </form>
