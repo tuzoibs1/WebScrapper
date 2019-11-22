@@ -12,21 +12,21 @@ def home(request):
 
 def new_search(request):
     search = request.POST.get('search')
-    #creating search object to hold searched onject
-    models.Search.object.create(search=search)
+    #creating search object to hold searched querys
+    models.Search.objects.create(search=search)
+    
     # print(quote_plus(search))
     final_url = BASE_CRAIGLIST_URL.format(quote_plus(search))
     response = requests.get(final_url)
     print(final_url)
-    
-    
     data = response.text
+    
     #parse data to bs4 object 
     soup = BeautifulSoup(data, features='html.parser')
-    post_titiles = soup.find_all('a', {'class': 'result-title'})
-    print(post_titiles)
-    #print(data)
+    post_titles = soup.find_all('a', {'class': 'result-title'})
+    print(post_titles[0].get('href'))
     
+    #print(data)
     stuff_for_frontend ={
         'search': search,
     }
