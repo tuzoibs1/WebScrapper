@@ -1,8 +1,8 @@
 import requests
-from requests.compat import quote_plus
-from django.shortcuts import render
 from bs4 import BeautifulSoup
-from . import models 
+from django.shortcuts import render
+from requests.compat import quote_plus
+from . import models
 
 #url with quiry thats dynamically generated
 BASE_CRAIGLIST_URL =  'https://minneapolis.craigslist.org/search/?query={}'
