@@ -1,1 +1,2 @@
-web: gunicorn my_app.wsg1
+release: python manage.py migrate
+web: gunicorn criag_scrapper.wsg1
