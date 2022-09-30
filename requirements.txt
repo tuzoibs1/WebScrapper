@@ -17,7 +17,7 @@ idna==2.8
 importlib-metadata==0.23
 include==0.2.2
 isort==4.3.21
-joblib==0.14.0
+joblib==1.2.0
 lazy-object-proxy==1.4.2
 mccabe==0.6.1
 more-itertools==7.2.0
